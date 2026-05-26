@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Compressor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Image Compressor</h1>
+
+    <p>Compress images to your target KB size.</p>
+
+    <label>Set Image Width (px)</label>
+    <input type="number" id="widthInput" value="1000">
+
+    <label>Target File Size (KB)</label>
+    <input type="number" id="targetSize" value="200">
+
+    <label>Compression Quality</label>
+
+    <input
+      type="range"
+      id="qualityInput"
+      min="10"
+      max="100"
+      value="60"
+      oninput="updateQualityInfo()"
+    >
+
+    <div class="size-info" id="qualityInfo">
+      Compression Quality: 60%
+    </div>
+
+    <input type="file" id="imageInput" accept="image/*">
+
+    <button onclick="compressImage()">
+      Compress Image
+    </button>
+
+    <div class="progress-box">
+      <div id="uploadText">
+        Upload Progress: 0%
+      </div>
+
+      <div class="progress-bar">
+        <div id="uploadBar"></div>
+      </div>
+    </div>
+
+    <div class="progress-box">
+      <div id="downloadText">
+        Download Progress: 0%
+      </div>
+
+      <div class="progress-bar">
+        <div id="downloadBar"></div>
+      </div>
+    </div>
+
+    <div class="size-info" id="sizeInfo"></div>
+
+    <img id="preview">
+
+    <a id="downloadBtn" class="download-btn">
+      Download Compressed Image
+    </a>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
